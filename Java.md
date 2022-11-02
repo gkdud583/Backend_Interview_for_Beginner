@@ -781,7 +781,12 @@ Collection 인터페이스 위에는 Iterable이라는 인터페이스가 있고
 + HashTable
     - key,value에 null값 비허용
     - __모든 작업에 동기 처리__
-
++ Hash 충돌시 방법
+    - 다른 값에 대해 동일한 키를 가지는 경우 (해시 충돌)
+    - Open Addressing: 추가적인 메모리 사용없이 빈 공간을 사용하는 방법.
+      - Linear Probing: 인덱스 뒤에 있는 버킷중에 빈 버킷을 찾아 데이터를 넣는 방식.
+    - Separate Chaining: 인덱스가 가리키고 있는 Linked List에 노드를 추가하는 방식.
+  
 </details>
 
 -----------------------
