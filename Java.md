@@ -781,6 +781,12 @@ Collection 인터페이스 위에는 Iterable이라는 인터페이스가 있고
 + HashTable
     - key,value에 null값 비허용
     - __모든 작업에 동기 처리__
++ Hash 충돌시 해결 방법
+    - int index = X.hashCode() % M; -> 서로 다른 값에 대해 해시값이 동일한 문제가 발생한다. (해시충돌)
+    - Open Addressing, Separate Chaining 두 가지 방식이 있다.
+    - Open Addressing 방식: Linked List 같은 추가적인 메모리를 사용하지 않고 빈 공간을 사용하는 방법.
+        - Linear Probing: 인덱스 뒤에 있는 버킷중 빈 버킷을 찾아 데이터를 넣는 방식.
+    - Separate Chaining 방식: index가 가리키고 있는 Linked List에 노드를 추가하는 방법.
 
 </details>
 
